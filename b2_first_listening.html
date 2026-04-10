@@ -187,7 +187,7 @@ html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);colo
   <div class="sp-inner">
     <div class="sp-badge">Cambridge English</div>
     <div class="sp-title">B2 First</div>
-    <div class="sp-sub">Listening · 30 Questions · ~40 min</div>
+    <div class="sp-sub">Listening · 30 Questions · ~60 min</div>
     <div class="sp-form">
       <label>Name</label>
       <input type="text" id="inp-n" placeholder="Your name..." autocomplete="given-name">
@@ -210,7 +210,7 @@ html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);colo
     <div class="tb-mid"><div class="tb-part" id="tb-part"><b>Listening</b></div></div>
     <div class="tb-right">
       <div class="save-wrap"><div class="sdot" id="sdot"></div><span id="stxt">Saved ✓</span></div>
-      <div class="timer" id="timer">0:40:00</div>
+      <div class="timer" id="timer">0:60:00</div>
       <button class="btn-deliver" onclick="confirmDeliver()">Submit ✓</button>
     </div>
   </div>
@@ -779,7 +779,7 @@ function updateProg() {
   document.getElementById('prog-fill').style.width = (done / TOTAL * 100) + '%';
 }
 
-// ── TIMER (40 min) ──
+// ── TIMER (60 min) ──
 function startTimer() {
   const tot = 60 * 60;
   timerInt = setInterval(() => {
@@ -865,7 +865,7 @@ function startExam() {
   if (saved !== null) {
     const elapsed = saved.elapsed || 0;
     startTime = Date.now() - (elapsed * 1000);
-    const rem = 40*60 - elapsed;
+    const rem = 60*60 - elapsed;
     const rm = Math.floor(rem/60), rs = rem%60;
     showToast('⏱️', `Session restored · Time left: 0:${String(rm).padStart(2,'0')}:${String(rs).padStart(2,'0')}`);
   } else {
