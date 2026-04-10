@@ -833,7 +833,7 @@ function updateProg() {
 
 // ── TIMER (40 min) ──
 function startTimer() {
-  const tot = 40 * 60;
+  const tot = 60 * 60;
   timerInt = setInterval(() => {
     const rem = tot - Math.floor((Date.now() - startTime) / 1000);
     if (rem <= 0) {
