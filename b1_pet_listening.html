@@ -179,13 +179,13 @@ html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);colo
   <div class="sp-inner">
     <div class="sp-badge">Cambridge English · B1 Preliminary</div>
     <div class="sp-title">B1 Preliminary</div>
-    <div class="sp-sub">Listening · 25 Questions · ~30 min</div>
+    <div class="sp-sub">Listening · 25 Questions · ~60 min</div>
     <div class="sp-form">
       <label>Name</label>
       <input type="text" id="inp-n" placeholder="Your name..." autocomplete="given-name">
       <label>Last name</label>
       <input type="text" id="inp-a" placeholder="Your last names..." autocomplete="family-name">
-      <div class="info-box">🎧 Time: <strong>approximately 30 minutes</strong><br>▶️ Audio will play automatically — it cannot be paused or rewound.<br>💾 Auto-save — answers are automatically restored if there's a connection issue.</div>
+      <div class="info-box">🎧 Time: <strong>approximately 60 minutes</strong><br>▶️ Audio will play automatically — it cannot be paused or rewound.<br>💾 Auto-save — answers are automatically restored if there's a connection issue.</div>
       <button class="btn-start" onclick="startExam()">Start the exam →</button>
     </div>
   </div>
@@ -202,7 +202,7 @@ html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);colo
     <div class="tb-mid"><div class="tb-part" id="tb-part"><b>Listening</b></div></div>
     <div class="tb-right">
       <div class="save-wrap"><div class="sdot" id="sdot"></div><span id="stxt">Saved ✓</span></div>
-      <div class="timer" id="timer">0:30:00</div>
+      <div class="timer" id="timer">0:60:00</div>
       <button class="btn-deliver" onclick="confirmDeliver()">Submit ✓</button>
     </div>
   </div>
@@ -728,7 +728,7 @@ function updateProg() {
 
 // ── TIMER (30 min) ──
 function startTimer() {
-  const tot = 30 * 60;
+  const tot = 60 * 60;
   timerInt = setInterval(() => {
     const rem = tot - Math.floor((Date.now() - startTime) / 1000);
     if (rem <= 0) {
